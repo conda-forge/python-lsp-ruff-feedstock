@@ -9,7 +9,6 @@ source:
   sha256: 4ea4de41cfe54f90dc3dc25b6576c489419b62314ff22769cdd4999570f9f58e
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -22,7 +21,7 @@ requirements:
     - python >=3.7
     - python-lsp-server
     - ruff >=0.0.260
-    - tomli >= 1.1.0  # [py<311]
+    - tomli >=1.1.0  # [py<311]
 
 test:
   source_files:
