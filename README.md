@@ -147,4 +147,5 @@ Feedstock Maintainers
 
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@jhossbach](https://github.com/jhossbach/)
+* [@jonas-w](https://github.com/jonas-w/)
 
