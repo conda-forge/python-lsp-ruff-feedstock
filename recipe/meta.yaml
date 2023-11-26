@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: python-lsp-ruff
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/python-lsp-ruff/python-lsp-ruff-{{ version }}.tar.gz
-  sha256: bdfdd9359c9e9f55b6f6a938493d6cbace554dccacf45df4ebb36552be34e9b8
+  sha256: 9424c114a4dbd5d8eb450717e0483f1b616cf95aea4ef27f5d59d43d533fe671
 
 build:
   noarch: python
@@ -16,10 +16,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
     - lsprotocol >=2022.0.0a1
-    - python >=3.7
+    - cattrs !=23.2.1
+    - python >=3.8
     - python-lsp-server-base
     - ruff >=0.1.0,<0.2.0
     - tomli >=1.1.0
