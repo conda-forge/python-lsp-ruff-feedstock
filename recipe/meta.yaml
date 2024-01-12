@@ -22,7 +22,8 @@ requirements:
     - cattrs !=23.2.1
     - python >=3.8
     - python-lsp-server-base
-    - ruff >=0.1.5,<0.2.0,!=0.1.9=*_0,!=0.1.10=*_0,!=0.1.11=*_0
+    # https://github.com/conda-forge/ruff-feedstock/issues/153
+    - ruff >=0.1.5,<0.2.0,!=0.1.9,!=0.1.10,!=0.1.11
     - tomli >=1.1.0
 
 test:
