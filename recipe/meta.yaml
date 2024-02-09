@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -18,12 +18,11 @@ requirements:
     - pip
     - python >=3.8
   run:
-    - lsprotocol >=2022.0.0a1
+    - lsprotocol >=2023.0.1
     - cattrs !=23.2.1
     - python >=3.8
     - python-lsp-server-base
-    # https://github.com/conda-forge/ruff-feedstock/issues/153
-    - ruff >=0.1.5,<0.2.0,!=0.1.9,!=0.1.10,!=0.1.11
+    - ruff >=0.2.0,<0.3.0
     - tomli >=1.1.0
 
 test:
@@ -33,10 +32,12 @@ test:
     - pylsp_ruff
   commands:
     - pip check
-    - pytest -vv --cov=pylsp_ruff --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=84
+    - coverage run --source=pylsp_ruff --branch -m pytest -vv --color=yes --tb=long
+    - coverage report --show-missing --skip-covered --fail-under=84
   requires:
+    - coverage
     - pip
-    - pytest-cov
+    - pytest
 
 about:
   home: https://pypi.org/project/python-lsp-ruff
