@@ -10,8 +10,8 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
     - cattrs !=23.2.1
     - python >=3.8
     - python-lsp-server-base
-    - ruff >=0.2.0,<0.3.0
+    - ruff >=0.2.0
     - tomli >=1.1.0
 
 test:
