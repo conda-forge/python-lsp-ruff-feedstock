@@ -1,8 +1,8 @@
-github:
-  branch_name: main
-  tooling_branch_name: main
+bot:
+  inspection: hint-all
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
-bot:
-  inspection: hint-all
+github:
+  branch_name: main
+  tooling_branch_name: main
