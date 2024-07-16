@@ -1,4 +1,4 @@
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 package:
   name: python-lsp-ruff
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/python-lsp-ruff/python_lsp_ruff-{{ version }}.tar.gz
-  sha256: 0bb3a227bc136e8ab8c66e91733f2673dc15df6f7fc9eb99d4267d0991b327a5
+  sha256: 3f80bdb0b4a8ee24624596a1cff60b28cc37771773730f9bf7d946ddff9f0cac
 
 build:
   noarch: python
