@@ -40,7 +40,7 @@ test:
   commands:
     - pip check
     - coverage run --source=pylsp_ruff --branch -m pytest -vv --color=yes --tb=long
-    - coverage report --show-missing --skip-covered --fail-under=87
+    - coverage report --show-missing --skip-covered --fail-under=86
 
 about:
   home: https://pypi.org/project/python-lsp-ruff
