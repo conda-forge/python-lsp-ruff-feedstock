@@ -3,6 +3,7 @@ schema_version: 1
 
 context:
   version: "2.3.1"
+  python_check_max: "3.14"
 
 package:
   name: python-lsp-ruff
@@ -33,11 +34,14 @@ requirements:
 
 tests:
   - python:
-      imports:
-        - pylsp_ruff
+      imports: pylsp_ruff
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
   - files:
       source:
-        - tests
+        - tests/
     requirements:
       run:
         - coverage
