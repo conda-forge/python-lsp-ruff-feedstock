@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 2.3.0
+  version: "2.3.1"
 
 package:
   name: python-lsp-ruff
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/python-lsp-ruff/python_lsp_ruff-${{ version }}.tar.gz
-  sha256: 647745b7f3010ac101e3c53a797b8f9deb1f52228b608d70ad0e8e056978c3b7
+  sha256: 37831ae9bd498214b13ea1e73df7fe5721c7055534c644efbb81c52069e73341
 
 build:
   number: 0
