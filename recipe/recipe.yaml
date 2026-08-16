@@ -29,7 +29,7 @@ requirements:
     - cattrs !=23.2.1
     - python >=${{ python_min }}
     - python-lsp-server-base
-    - ruff >=0.2.0
+    - ruff >=0.8.0
     - tomli >=1.1.0
 
 tests:
