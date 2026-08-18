@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.3.2"
+  version: "2.3.3"
   python_check_max: "3.14"
 
 package:
@@ -12,11 +12,11 @@ package:
 source:
   - target_directory: dist
     url: https://pypi.org/packages/source/p/python-lsp-ruff/python_lsp_ruff-${{ version }}.tar.gz
-    sha256: 1b6705a7f671b760a7870fb84063d207f21ca5821fd51cb9a2483639d64a8c88
+    sha256: 156bfbbe2b6ef5d1a2d69500e0804677b64469fb59e41c4e77774fd3440a7f32
   # PyPI sdist missing test files, see https://github.com/python-lsp/python-lsp-ruff/issues/117
   - target_directory: src
     url: https://github.com/python-lsp/python-lsp-ruff/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: ab88cd37992ac3002818e7ed6ab3ccbf8cd4bc2646ecbf10114c22c3959f8ccc
+    sha256: f77b16361c48517a90f1d3107069fd04714f651c9bb1b24859a507f8f1401cac
 
 build:
   number: 0
