@@ -1,0 +1,12 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 3b12afe..ae3b0ab 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -13,7 +13,6 @@ readme = "README.md"
+ requires-python = ">=3.8"
+ license = {text = "MIT"}
+ dependencies = [
+-  "ruff>=0.8.0",
+   "python-lsp-server",
+ 	"cattrs!=23.2.1",
+   "lsprotocol>=2023.0.1",
