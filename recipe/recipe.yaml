@@ -3,7 +3,8 @@ schema_version: 1
 
 context:
   version: "2.3.4"
-  python_check_max: "3.14"
+  python_check_max: "3.15"
+  ruff_min: "0.8.0"
 
 package:
   name: python-lsp-ruff
@@ -23,7 +24,7 @@ build:
   noarch: python
   script:
     - cd dist
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
 
 requirements:
   host:
@@ -35,10 +36,17 @@ requirements:
     - cattrs !=23.2.1
     - python >=${{ python_min }}
     - python-lsp-server-base
-    - ruff >=0.8.0
+    - ruff >=${{ ruff_min }}
     - tomli >=1.1.0
 
 tests:
+  - package_contents:
+      strict: true
+      files:
+        - etc/conda/test-files/python-lsp-ruff/**
+      site_packages:
+        - pylsp_ruff/**
+        - pylsp_ruff-${{ version }}.dist-info/**
   - python:
       imports: pylsp_ruff
       pip_check: true
@@ -47,7 +55,7 @@ tests:
         - ${{ python_check_max }}.*
   - files:
       source:
-        - src/tests/
+        - src/tests/**
     requirements:
       run:
         - coverage
